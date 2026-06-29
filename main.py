@@ -9,9 +9,11 @@ Main steps to this project are as follows:
 #Package imports:
 import numpy as np
 import cv2
-import argparse
 import imutils
-from pyimagesearch.transform import four_point_transform
-from skimage.filters import threshold_local
 
+file = "img1.JPG"
+image = cv2.imread(file, 1)
+cv2.imshow("scan", image)
 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
