@@ -12,8 +12,15 @@ import cv2
 import imutils
 
 file = "img1.JPG"
-image = cv2.imread(file, 1)
-cv2.imshow("scan", image)
+colour_image = cv2.imread(file, 1)
+cv2.imshow("scan", colour_image)
+
+#For edge detection, it is better to make the image grey and blur it. So that's what we're gonna do.
+
+
+grey_image = cv2.cvtColor(colour_image, cv2.COLOR_BGR2GRAY)
+
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
