@@ -1,0 +1,13 @@
+There are different types of blurring you can use with OpenCV: Gaussian, Median, and Bilateral. They all have different uses, but Gaussian
+is better for ML and Deep Learning Models.
+A good article about the Gaussian Function: https://metaphor.ethz.ch/x/2025/hs/401-3005-00L/models/paper_6_gauss.pdf
+
+Attempt1.png is an image of the first attempt of using the canny edge detection algorithm with the base thresholds (75 < x < 200).
+Since it isn't perfect and is missing the left edge, we have to adjust the thresholds.
+
+So I adjusted the thresholds a lot and it didn't work. I suspect it's because there isn't a clear enough distinction between the surface and the object.
+So I took a different image with my access card on a black table. The table is made of wood, so there are some wood markings (Attempt 10). I'm going to 
+see if I can get rid of those marks by making the blur stronger.
+
+[End 30.06.2026]
+

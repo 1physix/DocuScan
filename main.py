@@ -13,14 +13,20 @@ import imutils
 
 file = "img1.JPG"
 colour_image = cv2.imread(file, 1)
-cv2.imshow("scan", colour_image)
 
 #For edge detection, it is better to make the image grey and blur it. So that's what we're gonna do.
 
-
 grey_image = cv2.cvtColor(colour_image, cv2.COLOR_BGR2GRAY)
 
+blurred_image = cv2.GaussianBlur(grey_image, (13,13), 0, 0)
+
+#Now we can apply something called the Canny filter. As I understand it, it applies a matrix to each window of pixels to detect if that pixel is a corner or not.
+thresh_low = 10
+thresh_upp = 200
+outline = cv2.Canny(blurred_image, thresh_low, thresh_upp)
 
 
+
+cv2.imshow("scan", outline)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
